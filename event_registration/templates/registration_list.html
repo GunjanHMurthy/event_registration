@@ -1,0 +1,6 @@
+<h1>Registrations</h1>
+<ul>
+    {% for registration in registrations %}
+        <li>{{ registration.name }} - {{ registration.event.name }} - {{ registration.status }}</li>
+    {% endfor %}
+</ul>

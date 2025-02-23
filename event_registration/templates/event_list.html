@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event List</title>
+</head>
+<body>
+    {% extends "base_generic.html" %}
+{% block content %}
+    <h1>Event List</h1>
+    <a href="{% url 'event-add' %}">Add New Event</a>
+    <ul>
+        {% for event in events %}
+            <li>
+                {{ event.name }} ({{ event.date }} at {{ event.location }})
+                <a href="{% url 'event-delete' event.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+
+</body>
+</html>

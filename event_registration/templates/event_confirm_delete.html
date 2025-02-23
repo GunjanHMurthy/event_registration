@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Event</title>
+</head>
+<body>
+    {% extends "base_generic.html" %}
+{% block content %}
+    <h1>Are you sure you want to delete "{{ object.name }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    
+    <a href="{% url 'event-list' %}">Cancel</a>
+    </form>
+    {% endblock %}
+</body>
+</html>
