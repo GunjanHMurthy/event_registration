@@ -160,7 +160,6 @@ Through this project, I learned:
 * Class-Based Views
 * URL Routing
 * Template Rendering
-* SQLite Database Integration
 * Django Admin Panel
 
 ---
